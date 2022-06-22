@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      My Website
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="todoScript.js"></script>
+    <script src="weatherScript.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="left-section">
+        
+        <img class="left" src="icons/hamburger-menu.svg">
+        <img class="left2" src="icons/todoIcon.png">
+        <img class="left3" src="icons/weatherIcon.png">
+        
+      </div>
+      <div class="mid-section">
+        <a class="todolink"href="#todo">To-do List App</a>
+        <a class="weatherlink"href="#weatherapp">Weather App</a>
+      </div>
+      <div class="right-section">
+        <div class="myicon">
+          <img class="icon" src="icons/icon2.jpg">
+        </div>
+        <div class="myname">
+          <div class="name">
+            Chao Wu
+          </div>
+          <div class="gender">
+            male
+          </div>
+          <div class="view">
+            looking for job...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <a class="sidebar-1">
+        <div>
+          <img src="icons/homesidebar.svg">
+        </div>
+        <div class="home">
+          Home
+        </div>
+      </a>
+      <a class="sidebar-1" href="#todo">
+        <div>
+          <img src="icons/todosidebar.png">
+        </div>
+        <div>
+          To-do list
+        </div>
+      </a>
+      <a class="sidebar-1" href="#weatherapp">
+        <div>
+          <img src="icons/weatherside.svg">
+        </div>
+        <div>
+          Check weather
+        </div>
+      </a>
+    </div>
+    
+    
+    <div id="todo"class = "content-flex">
+      
+      <div class="todo-content">
+        <div class="todo-header">
+          <input id="todo-text"type ="text" class="input1" placeholder="Enter todos"/>
+          <input id="todo-duedate"type ="date" class="input2"/>
+          <button onclick="addTodo()" class="addbutton">Add</button>
+        </div>
+        <div id="todo-list" class="todo-list">
+          
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div id="weatherapp"class="weatherapp">
+      <div class="city-input">
+        <input id="weather-city"type="text" class="weather-city" placeholder="Enter City"/>
+        <button id="searchbutton"onclick="getWeather()" class="searchbutton">Search</button>
+      </div>
+      
+
+      <div id="city-display"class="city-display">London</div>
+      <div id="temp-display"class="temp-display">16°C</div>
+      <div id="temp-range"class="temp-range">22°C - 12°C</div>
+      <div id="weather-icon"class="weather-icon">
+        <div><img id="weather-icon1" src="/icons/Clouds.png"/></div>
+        <div id="weather-type"class="weather-type">Clouds</div> 
+      </div>
+
+    </div>
+    <script>
+      render();
+    </script>
+
+
+  </body>
+</html>
